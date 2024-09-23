@@ -10,5 +10,7 @@ document.getElementById('doanteBtnFeni').addEventListener('click', function(even
     // MAIN TK
     const mainTkUpdate =  parseFloat(mainTk.innerText) - feniInputAmount;
     mainTk.innerText = mainTkUpdate;
-    console.log('hello')
+
+    // HISTORY UPDATE
+    showhistoryUpdate(feniInputAmount, 'Flood Relief in Feni, Bangladesh')
 })

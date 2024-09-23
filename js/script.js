@@ -4,7 +4,7 @@ const historyBtn = document.getElementById('historyBtn');
 
 // DONATION AND HISTORY CARDS
 const donateCards = document.getElementById('donate-cards');
-const historyCards = document.getElementById('history-cards');
+const historyCards = document.getElementById('historyContainer');
 
 // DONATION
 donationBtn.addEventListener('click', function(){

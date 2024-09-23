@@ -10,4 +10,7 @@ document.getElementById('donateBtnQta').addEventListener('click', function(event
     // MAIN TK
     const mainTkUpdate =  parseFloat(mainTk.innerText) - qtaInputAmount;
     mainTk.innerText = mainTkUpdate;
+
+    // HISTORY UPDATE
+    showhistoryUpdate(qtaInputAmount, 'Qutoa Movement')
 })
