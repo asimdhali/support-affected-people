@@ -1,4 +1,4 @@
-// COMMON FOR THREE CARDS (NOAKHALI, FENI & QUTOA)
+// COMMON FUNCTION TO UPDATE HISTORY SECTION
 function showhistoryUpdate(amount, place){
     const currentDate = new Date();
     const historyDiv = document.createElement('div');
