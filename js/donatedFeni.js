@@ -13,4 +13,10 @@ document.getElementById('doanteBtnFeni').addEventListener('click', function(even
 
     // HISTORY UPDATE
     showhistoryUpdate(feniInputAmount, 'Flood Relief in Feni, Bangladesh')
+
+    // SHOW MODAL
+    document.getElementById('showModal').showModal()
+
+    // NULL AFTER CLICKED
+    document.getElementById('nkInput').value = '';
 })

@@ -1,4 +1,3 @@
-
 // COMMON FOR THREE CARDS (NOAKHALI, FENI & QUTOA)
 function showhistoryUpdate(amount, place){
     const currentDate = new Date();

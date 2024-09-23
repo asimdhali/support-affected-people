@@ -40,35 +40,39 @@
       </style>
 </head>
 <body class="font-lexend">
-    <header class="bg-nav-bg sticky top-0 z-50">
-        <div class="container mx-auto navbar">
-            <div class="navbar-start">
-                <a class="btn btn-ghost text-xl font-semibold">Blog</a>
-            </div>
-            <div class="navbar-center flex justify-center items-center gap-2">
-                <figure>
-                    <img src="/assets/logo.png" alt="">
-                </figure>
-                <h2 class="text-main-txt font-semibold text-xl">Donate Bangladesh</h2>
-            </div>
-            <div class="navbar-end flex gap-2">
-                <img src="assets/coin.png" alt="">
-                <div class="flex gap-1 text-xl font-medium text-coin-txt">
-                    <div id="main-tk">6000</div>
-                    <p>BDT</p>
+    <header class="sticky top-0 z-50">
+        <div class="bg-nav-bg pt-2 pb-2 bg-opacity-90">
+            <div class="container mx-auto navbar">
+                <div class="navbar-start">
+                    <button id="blogBtn" class="btn bg-btn-bg hover:bg-lime-200 text-xl font-semibold">Blog</button>
+                    <button id="homeBtn" class="hidden btn bg-btn-bg hover:bg-lime-200 text-xl font-semibold">Home</button>
+                </div>
+                <div class="navbar-center flex justify-center items-center gap-2">
+                    <figure>
+                        <img src="/assets/logo.png" alt="">
+                    </figure>
+                    <h2 class="text-main-txt font-semibold text-xl">Donate Bangladesh</h2>
+                </div>
+                <div class="navbar-end flex gap-2">
+                    <img src="assets/coin.png" alt="">
+                    <div class="flex gap-1 text-xl font-medium text-coin-txt">
+                        <div id="main-tk">6000</div>
+                        <p>BDT</p>
+                    </div>
                 </div>
             </div>
+        </div>
+        
+
+        <div id="don-his" class="flex justify-center gap-4 z-50 bg-main-bg bg-opacity-90 pt-4 pb-4">
+            <button id="donationBtn" class="btn bg-btn-bg hover:bg-lime-200 text-xl font-semibold">Donation</button>
+            <button id="historyBtn" class="btn hover:bg-lime-200 text-xl font-semibold">History</button>
         </div>
     </header>
 
 
-    <main class="mt-20">
-        <section class="container mx-auto">
-            <div class="flex justify-center gap-4">
-                <button id="donationBtn" class="btn bg-btn-bg">Donation</button>
-                <button id="historyBtn" class="btn">History</button>
-            </div>
-
+    <main class="">
+        <section id="main-section" class="container mx-auto">
             <!-- CARD SECTION -->
              <div id="donate-cards" class="mt-8 mb-20">
                 <!-- CARD 1 -->
@@ -133,7 +137,7 @@
                         <h2 class="card-title">Aid for Injured in the Quota Movement   </h2>
                         <p>The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
                         <input id="qtaInput" class="border p-2 rounded-md w-full " type="text" placeholder="Write Donation Amount">
-                        <button id="donateBtnQta" class="btn bg-btn-bg hover:bg-lime-200">Donate Now</button>
+                        <button id="donateBtnQta" onclick="my_modal_5.showModal()" class="btn bg-btn-bg hover:bg-lime-200">Donate Now</button>
                     </div>
                 </div>
              </div>
@@ -144,8 +148,7 @@
 
 
               <!-- MODAL -->
-              <button class="hidden btn" onclick="my_modal_5.showModal()">open modal</button>
-              <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle text-center">
+              <dialog id="showModal" class="modal modal-bottom sm:modal-middle text-center">
                   <div class="modal-box">
                       <h3 class="text-3xl font-bold">Congrates!</h3>
                       <img class="mx-auto" src="./assets/coin.png" alt="">
@@ -159,6 +162,46 @@
                   </div>
               </dialog>
         </section>
+
+        <section id="faqs-section" class="hidden container mx-auto">
+            <div class="flex items-center gap-4 mb-5">
+                <div class="text-3xl font-bold">Important FAQ</div>
+                <img src="./assets/comment.png" alt="">
+            </div>
+            <div class="join join-vertical w-full">
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" checked="checked" />
+                    <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+                    <div class="collapse-content">
+                        <p>The Document Object Model (DOM) is a programming interface that represents the structure of an HTML or XML document as a tree of objects, where each node corresponds to a part of the document. It allows developers to access, modify, and interact with the content and structure dynamically using languages like JavaScript.</p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                    <div class="collapse-content">
+                        <p>To select an element from the DOM, you can use document.getElementById('id') to select an element by its ID or document.querySelector('.class') to select the first element that matches a class or tag. For multiple elements, document.querySelectorAll('tag') can be used to select all matching elements.</p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+                    <div class="collapse-content">
+                        <p>Event delegation in the DOM is a technique where a single event listener is added to a parent element to handle events for its child elements, taking advantage of event bubbling. It is useful because it improves performance and simplifies code by reducing the number of event listeners needed, especially for dynamically added elements.</p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                    <div class="collapse-content">
+                        <p>To manipulate an element's attributes, use element.setAttribute('attribute', 'value') or access properties directly like element.id = 'newId'. For styles, modify them using element.style.property = 'value' or by adding/removing CSS classes with element.classList.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <script src="./js/script.js"></script>
@@ -166,6 +209,7 @@
     <script src="./js/donatedFeni.js"></script>
     <script src="./js/doatedQuota.js"></script>
 
-    <script src="./js/history.js"></script>
+    <script src="./js/commonHistory.js"></script>
+    <script src="./js/blogBtn.js"></script>
 </body>
 </html>

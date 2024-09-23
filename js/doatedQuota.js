@@ -13,4 +13,10 @@ document.getElementById('donateBtnQta').addEventListener('click', function(event
 
     // HISTORY UPDATE
     showhistoryUpdate(qtaInputAmount, 'Qutoa Movement')
+
+    // SHOW MODAL
+    document.getElementById('showModal').showModal()
+
+    // NULL AFTER CLICKED
+    document.getElementById('nkInput').value = '';
 })

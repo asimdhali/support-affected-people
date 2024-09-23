@@ -26,6 +26,10 @@ document.getElementById('donateBtnNk').addEventListener('click', function(event)
         // HISTORY UPDATE 
         showhistoryUpdate(nkInputAmount, 'Flood Relief in Noakhali Bangladesh');
 
+        // SHOW MODAL
+        document.getElementById('showModal').showModal()
+
+        // NULL AFTER CLICKED
         document.getElementById('nkInput').value = '';
     }
 })
