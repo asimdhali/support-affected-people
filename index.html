@@ -33,7 +33,11 @@
         }
       </script>
 
-
+      <style>
+        .active{
+            background-color: rgb;
+        }
+      </style>
 </head>
 <body class="font-lexend">
     <header class="bg-nav-bg">
@@ -61,12 +65,12 @@
     <main class="mt-20">
         <section class="container mx-auto">
             <div class="flex justify-center gap-4">
-                <button class="btn bg-btn-bg">Donation</button>
-                <button class="btn">History</button>
+                <button id="donationBtn" class="btn bg-btn-bg">Donation</button>
+                <button id="historyBtn" class="btn">History</button>
             </div>
 
             <!-- CARD SECTION -->
-             <div class="hidden mt-8 mb-20">
+             <div id="donate-cards" class="mt-8 mb-20">
                 <!-- CARD 1 -->
                 <div class="card lg:card-side bg-base-100  p-8 border grid grid-cols-2 lg:gap-4">
                     <figure>
@@ -135,7 +139,7 @@
              </div>
 
              <!-- HISTORY SECTION -->
-              <div class="mt-8 mb-20" id="history">
+              <div id="history-cards" class="mt-8 mb-20">
                 <!-- CARD 1 -->
                 <div class="border rounded-xl p-8 mb-6">
                     <div class="flex text-main-txt font-semibold text-xl mb-2">
@@ -164,9 +168,26 @@
                 </div>
               </div>
 
+
+              <!-- MODAL -->
+              <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+              <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle text-center">
+                  <div class="modal-box">
+                      <h3 class="text-3xl font-bold">Congrates!</h3>
+                      <img class="mx-auto" src="./assets/coin.png" alt="">
+                      <p class="py-4">You have Donated for Humankind</p>
+                      <div>Successfully</div>
+                      <div class="modal-action flex justify-center">
+                          <form method="dialog">
+                              <button class="btn">Close Confirmation</button>
+                          </form>
+                      </div>
+                  </div>
+              </dialog>
         </section>
     </main>
 
     <script src="./js/script.js"></script>
+    <script src="./js/showHide.js"></script>
 </body>
 </html>
