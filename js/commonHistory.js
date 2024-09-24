@@ -1,4 +1,4 @@
-// COMMON FUNCTION TO UPDATE HISTORY SECTION
+// When any "Donate Now" button will be clicked, this function will be called
 function showhistoryUpdate(amount, place){
     const currentDate = new Date();
     const historyDiv = document.createElement('div');

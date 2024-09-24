@@ -1,6 +1,6 @@
 // NOAKHALI SECTION
 document.getElementById('donateBtnNk').addEventListener('click', function(){
-    donateNowAllEffect('nkInput', 'nkMainTk', 'Flood at Noakhali, Bangladesh');
+    donateNowAllEffect('nkInput', 'nkMainTk', 'Flood Relief at Noakhali, Bangladesh');
 });
 
 // FENI SECTION

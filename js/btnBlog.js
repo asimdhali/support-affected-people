@@ -6,9 +6,11 @@ const homeBtn = document.getElementById('homeBtn');
 const blogBtnsm = document.getElementById('blogBtnsm');
 const homeBtnsm = document.getElementById('homeBtnsm');
 
+// CONTROLLED SECTION
 const donateHistory = document.getElementById('don-his');
 const mainSection = document.getElementById('main-section');
 const faqsSection = document.getElementById('faqs-section');
+const footerSection = document.getElementById('footerid');
 
 // BLOGBTN ACTIVITY
 blogBtn.addEventListener('click', function(){
@@ -17,8 +19,8 @@ blogBtn.addEventListener('click', function(){
 
     donateHistory.classList.add('hidden');
     mainSection.classList.add('hidden');
-
     faqsSection.classList.remove('hidden')
+    footerSection.classList.add('hidden')
 });
 
 // HOMEBTN ACTIVITY
@@ -29,6 +31,7 @@ homeBtn.addEventListener('click', function(){
     donateHistory.classList.remove('hidden');
     mainSection.classList.remove('hidden');
     faqsSection.classList.add('hidden');
+    footerSection.classList.remove('hidden')
 })
 
 // BLOGBTNsm
@@ -38,8 +41,8 @@ blogBtnsm.addEventListener('click', function(){
 
     donateHistory.classList.add('hidden');
     mainSection.classList.add('hidden');
-
     faqsSection.classList.remove('hidden')
+    footerSection.classList.add('hidden');
 })
 
 // HOMEBTNsm
@@ -50,4 +53,5 @@ homeBtnsm.addEventListener('click', function(){
     donateHistory.classList.remove('hidden');
     mainSection.classList.remove('hidden');
     faqsSection.classList.add('hidden');
+    footerSection.classList.remove('hidden');
 })
