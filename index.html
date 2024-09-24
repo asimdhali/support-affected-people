@@ -39,7 +39,7 @@
     <header class="sticky top-0 z-50">
         <!-- NAV -->
         <nav class="bg-nav-bg pt-6 pb-6 bg-opacity-90">
-            <div class="container mx-auto px-4">
+            <div class="container mx-auto px-2 lg:px-4">
                 <div class="flex justify-between items-center">
                     <div class="items-center space-x-2  hidden md:block">
                             <a href="./blog.html" class="btn bg-btn-bg hover:bg-lime-200 text-xl font-semibold px-4 py-2 rounded">Blog</a>
@@ -59,15 +59,15 @@
                             </ul>
                         </div>
                         <figure>
-                            <img src="./assets/logo.png" alt="Logo">
+                            <img src="./assets/logo.png" class="w-[20px] md:w-[35px]" alt="Logo">
                         </figure>
-                        <div>
+                        <div class="">
                             <h2 class="text-main-txt font-semibold text-xl hidden md:block">Donate Bangladesh</h2>
-                            <h2 class="text-main-txt font-semibold text-xl md:hidden">DonateBD</h2>
+                            <h2 class="text-main-txt font-bold text-[1rem] md:hidden">DonateBD</h2>
                         </div>
                     </div>
                     
-                    <div class="flex items-center space-x-2 text-xl font-medium justify-center text-coin-txt">
+                    <div class="flex items-center space-x-2 text-[1rem] md:text-xl font-medium justify-center text-coin-txt">
                         <img src="assets/coin.png" alt="Coin">
                         <div class="flex items-center space-x-1">
                             <div id="main-tk">5500</div>
@@ -80,18 +80,18 @@
 
         <!-- DONATION & HISTORY -->
         <div id="don-his" class="flex justify-center gap-4 z-50 bg-main-bg bg-opacity-90 pt-4 pb-4">
-            <button id="donationBtn" class="btn bg-btn-bg hover:bg-lime-200 text-xl font-semibold">Donation</button>
-            <button id="historyBtn" class="btn hover:bg-lime-200 text-xl font-medium text-coin-txt">History</button>
+            <button id="donationBtn" class="btn bg-btn-bg hover:bg-lime-200 text-[1rem] md:text-xl font-semibold">Donation</button>
+            <button id="historyBtn" class="btn hover:bg-lime-200 text-[1rem] md:text-xl font-medium text-coin-txt">History</button>
         </div>
     </header>
 
     <!-- MAIN SECTION STARTS -->
-    <main class="mx-3">
+    <main class="mx-1 md:mx-3">
         <section id="main-section" class="container mx-auto mt-4">
              <div id="donate-cards">
 
                 <!-- CARD 1 -->
-                <div class="card lg:card-side bg-base-100  p-4 border grid grid-cols-1 lg:grid-cols-2 lg:gap-4">
+                <div class="card lg:card-side bg-base-100 p-1  md:p-4 border grid grid-cols-1 lg:grid-cols-2 lg:gap-4">
                     <figure>
                         <img src="./assets/noakhali.png" alt="Album" />
                     </figure>
@@ -118,7 +118,7 @@
                 </div>
                 
                 <!-- CARD 2 -->
-                <div class="card lg:card-side bg-base-100 p-4 border grid grid-cols-1 lg:grid-cols-2 lg:gap-4 mt-8">
+                <div class="card lg:card-side bg-base-100 p-1 md:p-4 border grid grid-cols-1 lg:grid-cols-2 lg:gap-4 mt-8">
                     <figure>
                         <img src="./assets/feni.png" alt="Album" />
                     </figure>
@@ -141,7 +141,7 @@
                 </div>
                 
                 <!-- CARD 3 -->
-                <div class="card lg:card-side bg-base-100 p-4 border grid grid-cols-1 lg:grid-cols-2 lg:gap-4 mt-8 mb-8">
+                <div class="card lg:card-side bg-base-100 p-1 md:p-4 border grid grid-cols-1 lg:grid-cols-2 lg:gap-4 mt-8 mb-8">
                     <figure>
                         <img src="./assets/quota-protest.png" alt="Album" />
                     </figure>
@@ -172,7 +172,7 @@
 
               <!-- MODAL -->
               <dialog id="showModal" class="modal text-center justify-center">
-                  <div class="modal-box min-w-[400px] md:min-w-[600px]">
+                  <div class="modal-box min-w-[200px] md:min-w-[600px]">
                       <h3 class="text-3xl font-bold py-3">Congrates!</h3>
                       <img class="mx-auto" src="./assets/coin.png" alt="">
                       <p class="pt-4">You have Donated for Humankind</p>
