@@ -6,12 +6,15 @@
     <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
     <title>Donate Bangladesh</title>
 
-    <!-- DAISY UI -->
+    <!-- DAISY UI CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- GOOGLE FONT -->
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- FONTAWESOME CDN -->
+    <script src="https://kit.fontawesome.com/44dfdbeab1.js" crossorigin="anonymous"></script>
 
     <script>
         tailwind.config = {
@@ -22,7 +25,6 @@
                 'coin-txt': 'rgba(17, 17, 17, 0.7)',
                 'nav-bg': 'rgb(249, 247, 243)',
                 'btn-bg': 'rgb(180, 244, 97)',
-                'unactive-btn': 'rgba(17, 17, 17, 0.3)',
                 'main-bg': 'rgb(255, 255, 255)'
               }
             },
@@ -41,28 +43,50 @@
 </head>
 <body class="font-lexend">
     <header class="sticky top-0 z-50">
-        <div class="bg-nav-bg pt-2 pb-2 bg-opacity-90">
-            <div class="container mx-auto navbar">
-                <div class="navbar-start">
-                    <button id="blogBtn" class="btn bg-btn-bg hover:bg-lime-200 text-xl font-semibold">Blog</button>
-                    <button id="homeBtn" class="hidden btn bg-btn-bg hover:bg-lime-200 text-xl font-semibold">Home</button>
-                </div>
-                <div class="navbar-center flex justify-center items-center gap-2">
-                    <figure>
-                        <img src="/assets/logo.png" alt="">
-                    </figure>
-                    <h2 class="text-main-txt font-semibold text-xl">Donate Bangladesh</h2>
-                </div>
-                <div class="navbar-end flex gap-2">
-                    <img src="assets/coin.png" alt="">
-                    <div class="flex gap-1 text-xl font-medium text-coin-txt">
-                        <div id="main-tk">6000</div>
-                        <p>BDT</p>
+        <!-- NAV -->
+        <nav class="bg-nav-bg pt-2 pb-2 bg-opacity-90">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center">
+                    <div class="items-center space-x-2 hidden lg:block">
+                            <button id="blogBtn" class="btn bg-btn-bg hover:bg-lime-200 text-xl font-semibold px-4 py-2 rounded">Blog</button>
+                            <button id="homeBtn" class="hidden btn bg-btn-bg hover:bg-lime-200 text-xl font-semibold px-4 py-2 rounded">Home</button>
+                    </div>
+                    
+                    <div class="flex items-center gap-2 justify-center">
+                        <!-- DROPDOWN MENU -->
+                        <div class="dropdown dropdown-hover md:hidden">
+                            <button tabindex="0" role="button" class="btn bg-transparent hover:bg-gray-100 rounded-full">
+                                <i class="fa-solid fa-bars font-bold text-xl"></i>
+                            </button>
+                            <ul tabindex="0"
+                                class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 shadow">
+                                <li>
+                                    <button id="blogBtnsm" class="btn hover:bg-lime-200 text-xl font-semibold px-4 py-2 rounded">Blog</button>
+                                </li>
+                                <li>
+                                    <button id="homeBtnsm" class="btn bg-btn-bg hover:bg-lime-200 text-xl font-semibold px-4 py-2 rounded">Home</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <figure>
+                            <img src="/assets/logo.png" alt="Logo" class="w-10 h-10">
+                        </figure>
+                        <div>
+                            <h2 class="text-main-txt font-semibold text-xl hidden md:block">Donate Bangladesh</h2>
+                            <h2 class="text-main-txt font-semibold text-xl md:hidden">DonateBD</h2>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-2 text-2xl font-bold justify-center text-coin-txt">
+                        <img src="assets/coin.png" alt="Coin">
+                        <div class="flex items-center space-x-1">
+                            <div id="main-tk">6000</div>
+                            <p>BDT</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        
+        </nav>
 
         <div id="don-his" class="flex justify-center gap-4 z-50 bg-main-bg bg-opacity-90 pt-4 pb-4">
             <button id="donationBtn" class="btn bg-btn-bg hover:bg-lime-200 text-xl font-semibold">Donation</button>
@@ -76,14 +100,14 @@
             <!-- CARD SECTION -->
              <div id="donate-cards" class="mt-8 mb-20">
                 <!-- CARD 1 -->
-                <div class="card lg:card-side bg-base-100  p-8 border grid grid-cols-2 lg:gap-4">
+                <div class="card lg:card-side bg-base-100  p-8 border grid grid-cols-1 lg:grid-cols-2 lg:gap-4">
                     <figure>
                         <img src="./assets/noakhali.png" alt="Album" />
                     </figure>
                     <div class="card-body">
                         <div class="flex gap-2">
                             <img src="assets/coin.png" alt="">
-                            <div class="flex gap-1 text-xl font-medium text-coin-txt">
+                            <div class="flex gap-1 text-2xl font-bold text-coin-txt">
                                 <div id="nkMainTk">1000</div>
                                 <p>BDT</p>
                             </div>
@@ -100,15 +124,15 @@
                 </div>
                 
                 <!-- CARD 2 -->
-                <div class="card lg:card-side bg-base-100 p-8 border grid grid-cols-2 lg:gap-4 mt-8">
+                <div class="card lg:card-side bg-base-100 p-8 border grid grid-cols-1 lg:grid-cols-2 lg:gap-4 mt-8">
                     <figure>
                         <img src="./assets/feni.png" alt="Album" />
                     </figure>
                     <div class="card-body">
                         <div class="flex gap-2">
                             <img src="assets/coin.png" alt="">
-                            <div class="flex gap-1 text-xl font-medium text-coin-txt">
-                                <div id="feniMainTk">1500</div>
+                            <div class="flex gap-1 text-2xl font-bold text-coin-txt">
+                                <div id="feniMainTk" class="">1500</div>
                                 <p>BDT</p>
                             </div>
                         </div>
@@ -121,14 +145,14 @@
                 </div>
                 
                 <!-- CARD 3 -->
-                <div class="card lg:card-side bg-base-100 p-8 border grid grid-cols-2 lg:gap-4 mt-8 mb-8">
+                <div class="card lg:card-side bg-base-100 p-8 border grid grid-cols-1 lg:grid-cols-2 lg:gap-4 mt-8 mb-8">
                     <figure>
                         <img src="./assets/quota-protest.png" alt="Album" />
                     </figure>
                     <div class="card-body">
                         <div class="flex gap-2">
                             <img src="assets/coin.png" alt="">
-                            <div class="flex gap-1 text-xl font-medium text-coin-txt">
+                            <div class="flex gap-1 text-2xl font-bold text-coin-txt">
                                 <div id="qtaMainTk">1200</div>
                                 <p>BDT</p>
                             </div>
@@ -148,7 +172,7 @@
 
 
               <!-- MODAL -->
-              <dialog id="showModal" class="modal modal-bottom sm:modal-middle text-center">
+              <dialog id="showModal" class="modal modal-middle text-center justify-center">
                   <div class="modal-box">
                       <h3 class="text-3xl font-bold">Congrates!</h3>
                       <img class="mx-auto" src="./assets/coin.png" alt="">
@@ -164,9 +188,9 @@
         </section>
 
         <section id="faqs-section" class="hidden container mx-auto">
-            <div class="flex items-center gap-4 mb-5">
+            <div class="flex items-center justify-center md:justify-start gap-4 mb-5">
                 <div class="text-3xl font-bold">Important FAQ</div>
-                <img src="./assets/comment.png" alt="">
+                <img src="./assets/comment.gif" alt="">
             </div>
             <div class="join join-vertical w-full">
                 <div class="collapse collapse-arrow join-item border-base-300 border">
