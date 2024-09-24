@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./assets/logo.png">
+    <title>Donate Bangladesh</title>
+
+    <!-- DAISY UI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- FONTAWESOME CDN -->
+    <script src="https://kit.fontawesome.com/44dfdbeab1.js" crossorigin="anonymous"></script>
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                'main-txt': 'rgb(17, 17, 17)',
+                'coin-txt': 'rgba(17, 17, 17, 0.7)',
+                'nav-bg': 'rgb(249, 247, 243)',
+                'btn-bg': 'rgb(180, 244, 97)',
+                'main-bg': 'rgb(255, 255, 255)'
+              }
+            },
+            fontFamily: {
+            'lexend': ['"Lexend"', 'sans-serif'], // Corrected
+            }
+          }
+        }
+      </script>
+</head>
+<body class="font-lexend text-main-txt">
+    <header class="sticky top-0 z-50">
+        <!-- NAV -->
+        <nav class="bg-nav-bg pt-6 pb-6 bg-opacity-90">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center">
+                    <div class="items-center space-x-2  hidden md:block">
+                            <a href="./index.html" class="btn bg-btn-bg hover:bg-lime-200 text-xl font-semibold px-4 py-2 rounded">Home</a>
+                    </div>
+                    
+                    <div class="flex items-center gap-2 justify-center">
+                        <!-- DROPDOWN MENU -->
+                        <div class="dropdown dropdown-hover md:hidden">
+                            <button tabindex="0" role="button" class="btn bg-transparent hover:bg-gray-100 rounded-full">
+                                <i class="fa-solid fa-bars font-bold text-xl"></i>
+                            </button>
+                            <ul tabindex="0"
+                                class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 shadow">
+                                <li>
+                                    <a href="./index.html" class="btn bg-btn-bg hover:bg-lime-200 text-xl font-semibold px-4 py-2 rounded">Home</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <figure>
+                            <img src="./assets/logo.png" alt="Logo">
+                        </figure>
+                        <div>
+                            <h2 class="text-main-txt font-semibold text-xl hidden md:block">Donate Bangladesh</h2>
+                            <h2 class="text-main-txt font-semibold text-xl md:hidden">DonateBD</h2>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-2 text-xl font-medium justify-center text-coin-txt">
+                        <img src="assets/coin.png" alt="Coin">
+                        <div class="flex items-center space-x-1">
+                            <div id="main-tk">6000</div>
+                            <p>BDT</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="mx-3">
+        <!-- FAQ SECTION -->
+        <section id="faqs-section" class="container mx-auto mt-5">
+            <div class="flex items-center justify-center md:justify-start gap-4 mb-5">
+                <div class="text-2xl font-extrabold">Important FAQ</div>
+                <img src="./assets/comment.gif" alt="FAQ's">
+            </div>
+
+            <div class="join join-vertical w-full">
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" checked="checked" />
+                    <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+                    <div class="collapse-content">
+                        <p class="text-coin-txt text-justify">The Document Object Model (DOM) is a programming interface that represents the structure of an HTML or XML document as a tree of objects, where each node corresponds to a part of the document. It allows developers to access, modify, and interact with the content and structure dynamically using languages like JavaScript.</p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                    <div class="collapse-content">
+                        <p class="text-coin-txt text-justify">To select an element from the DOM, you can use document.getElementById('id') to select an element by its ID or document.querySelector('.class') to select the first element that matches a class or tag. For multiple elements, document.querySelectorAll('tag') can be used to select all matching elements.</p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+                    <div class="collapse-content">
+                        <p class="text-coin-txt text-justify">Event delegation in the DOM is a technique where a single event listener is added to a parent element to handle events for its child elements, taking advantage of event bubbling. It is useful because it improves performance and simplifies code by reducing the number of event listeners needed, especially for dynamically added elements.</p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                    <div class="collapse-content">
+                        <p class="text-coin-txt text-justify">To manipulate an element's attributes, use element.setAttribute('attribute', 'value') or access properties directly like element.id = 'newId'. For styles, modify them using element.style.property = 'value' or by adding/removing CSS classes with element.classList.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+</body>
+</html>
